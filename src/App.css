@@ -15,6 +15,17 @@ body {
 	background: #d8595a;
 }
 
+@media (min-width: 1300px) {
+
+	.container,
+	.container-lg,
+	.container-md,
+	.container-sm,
+	.container-xl {
+		max-width: 1200px;
+	}
+}
+
 .headerWrapper .top-strip {
 	padding: 8px 0px;
 }
@@ -26,7 +37,7 @@ body {
 .headerWrapper .header {
 	width: 100%;
 	height: auto;
-	padding: 10px 0px;
+	padding: 25px 0px;
 }
 
 .logoWrapper img {
@@ -109,4 +120,30 @@ header .part3 .circle svg {
 	color: #fff;
 	width: 20px;
 	height: 20px;
+}
+
+nav .allCatTab {
+	background: #f6bb92;
+	padding: 10px 15px !important;
+	border-radius: 30px !important;
+}
+
+nav .allCatTab * {
+	color: #fff
+}
+
+nav .allCatTab:hover {
+	background: #d8595a;
+}
+
+nav .allCatTab .text {
+	font-weight: 600;
+}
+
+nav .allCatTab .icon1 svg {
+	font-size: 20px !important;
+}
+
+nav .allCatTab .icon2 svg {
+	font-size: 15px !important;
 }
