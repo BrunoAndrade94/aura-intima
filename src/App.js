@@ -1,10 +1,10 @@
-
 import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
     <div className="App">
-      <h1>
+      <h1 className='text-danger'>
         Aura Íntima
       </h1>
     </div>
