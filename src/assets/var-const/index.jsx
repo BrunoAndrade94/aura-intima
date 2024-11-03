@@ -3,6 +3,7 @@ export const PESQUISA_PLACEHOLDER = "Pesquisar por produtos..."
 export const INFORME_O_CEP = "Informe seu CEP..."
 export const TODAS_CATEGORIAS = "CATEGORIAS"
 export const TIPOS_CATEGORIAS = {
+	home: "Início",
 	promocao: "Promoção",
 	conjuntos: "Conjuntos",
 	calcinhas: "Calcinhas",
@@ -10,4 +11,4 @@ export const TIPOS_CATEGORIAS = {
 	maisVendidos: "Mais Vendidos",
 	modaPraia: "Moda Praia",
 	modaSex: "Moda Sex"
-}
+} 

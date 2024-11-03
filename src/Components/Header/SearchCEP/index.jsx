@@ -1,4 +1,4 @@
-import { INFORME_O_CEP } from "../../../assets/text-const"
+import { INFORME_O_CEP } from "../../../assets/var-const"
 import { CiLocationOn } from "react-icons/ci";
 
 const SearchCEP = () => {

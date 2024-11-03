@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom"
-import { TIPOS_CATEGORIAS } from "../../../assets/text-const"
+import { TIPOS_CATEGORIAS } from "../../../assets/var-const"
 
 const Categories = () => {
 	return (
 		<>
-			<div className="navPartCategories col-sm-9 d-flex align-items-center">
-				<ul className="list list-inline w-100">
+			<div className="navPartCategories col-sm-9 align-items-center">
+				<ul className="list list-inline ml-auto">
+					<li className="list-inline-item"><Link to={"/"}>{TIPOS_CATEGORIAS.home}</Link></li>
 					<li className="list-inline-item"><Link to={"/"}>{TIPOS_CATEGORIAS.promocao}</Link></li>
 					<li className="list-inline-item"><Link to={"/"}>{TIPOS_CATEGORIAS.sutias}</Link></li>
 					<li className="list-inline-item"><Link to={"/"}>{TIPOS_CATEGORIAS.calcinhas}</Link></li>

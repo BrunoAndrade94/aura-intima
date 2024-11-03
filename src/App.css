@@ -1,4 +1,6 @@
 :root {
+	--cor-principal: #d8595a;
+	--cor-secundaria: #f6bb92;
 	--border-radius: 10px;
 	--rgba-black: rgba(0, 0, 0, 0.8) !important
 }
@@ -17,7 +19,7 @@ body {
 
 .bg-aura {
 	/* background: #8e00a3; */
-	background: #d8595a;
+	background: var(--cor-principal);
 }
 
 @media (min-width: 1300px) {
@@ -95,7 +97,7 @@ header .headerSearch button {
 	height: 30px !important;
 	width: 30px !important;
 	border-radius: 50px !important;
-	color: #d8595a;
+	color: var(--cor-principal);
 }
 
 header .headerSearch button svg {
@@ -110,7 +112,7 @@ header .part3 .circle {
 	width: 40px !important;
 	border-radius: 50px !important;
 	border: 1px solid rgba(0, 0, 0, 0.1) !important;
-	color: #d8595a;
+	color: var(--cor-principal);
 }
 
 header .part3 .circle svg {
@@ -131,7 +133,7 @@ header .part3 .circle svg {
 	position: absolute;
 	top: -6px;
 	right: -4px;
-	background: #d8595a;
+	background: var(--cor-principal);
 	border-radius: 50%;
 	color: #fff;
 	width: 20px;
@@ -139,7 +141,7 @@ header .part3 .circle svg {
 }
 
 div .allCatTab {
-	background: #f6bb92;
+	background: var(--cor-secundaria);
 	padding: 10px 15px !important;
 	border-radius: 30px !important;
 }
@@ -149,7 +151,7 @@ div .allCatTab * {
 }
 
 div .allCatTab:hover {
-	background: #d8595a;
+	background: var(--cor-principal);
 }
 
 div .allCatTab .text {
@@ -176,12 +178,16 @@ nav .navPartCategories ul li a {
 	text-transform: uppercase;
 	display: flex;
 	align-items: center;
-	padding: 0px 10px;
+	padding: 0px 5px;
 	transition: all 0.2s ease-in-out;
 	border-radius: var(--border-radius);
 }
 
+nav .navPartCategories ul li a svg {
+	font-size: 20px;
+}
+
 nav .navPartCategories ul li a:hover {
 	background: #f0faff;
-	color: #d8595a
+	color: var(--cor-principal)
 }

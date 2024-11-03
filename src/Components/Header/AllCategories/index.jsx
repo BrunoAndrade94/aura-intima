@@ -1,11 +1,11 @@
 import { Button } from "@mui/material"
 import { CiCircleList } from "react-icons/ci"
 import { TfiAngleDoubleDown } from "react-icons/tfi"
-import { TODAS_CATEGORIAS } from "../../../assets/text-const"
+import { TODAS_CATEGORIAS } from "../../../assets/var-const"
 
 const AllCategories = () => {
 	return (
-		<div className="col-sm-3 ">
+		<div className="col-sm-3">
 			<Button className="allCatTab">
 				<span className="icon1 mr-2"><CiCircleList /></span>
 				<span class="text">{TODAS_CATEGORIAS}</span>

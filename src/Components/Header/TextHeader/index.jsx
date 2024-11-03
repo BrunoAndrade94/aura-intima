@@ -1,4 +1,4 @@
-import { TEXTO_HEADER } from "../../../assets/text-const";
+import { TEXTO_HEADER } from "../../../assets/var-const";
 
 const TextHeader = () => {
 	return (
