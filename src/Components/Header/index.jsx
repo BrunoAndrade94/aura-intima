@@ -10,6 +10,7 @@ const Header = () => {
 		<>
 			<div className="headerWrapper">
 				<TextHeader />
+
 				<header className="header">
 					<div className="container">
 						<div className="row">
@@ -21,7 +22,9 @@ const Header = () => {
 						</div>
 					</div>
 				</header>
+
 				<Navigation />
+
 			</div>
 		</>
 	)
