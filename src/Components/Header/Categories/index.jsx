@@ -13,6 +13,7 @@ const Categories = () => {
 					<li className="list-inline-item"><Link to={"/"}>{TIPOS_CATEGORIAS.maisVendidos}</Link></li>
 					<li className="list-inline-item"><Link to={"/"}>{TIPOS_CATEGORIAS.modaPraia}</Link></li>
 					<li className="list-inline-item"><Link to={"/"}>{TIPOS_CATEGORIAS.modaSex}</Link></li>
+					<li className="list-inline-item"><Link to={"/"}>{TIPOS_CATEGORIAS.contato}</Link></li>
 				</ul>
 			</div>
 		</>
