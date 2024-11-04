@@ -1,0 +1,21 @@
+.cardTab .price {
+	font-size: 18px;
+	font-weight: 500;
+	white-space: nowrap;
+	color: var(--rgba-black8);
+}
+
+.cardTab button {
+	background: #fff1ee;
+}
+
+.cardTab .count {
+	position: absolute;
+	top: -6px;
+	right: -4px;
+	background: var(--cor-principal);
+	border-radius: 50%;
+	color: #fff;
+	width: 20px;
+	height: 20px;
+}

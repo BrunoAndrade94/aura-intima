@@ -8,7 +8,7 @@ const AllCategories = () => {
 		<div className="col-sm-3">
 			<Button className="allCatTab">
 				<span className="icon1 mr-2"><CiCircleList /></span>
-				<span class="text">{TODAS_CATEGORIAS}</span>
+				<span className="text">{TODAS_CATEGORIAS}</span>
 				<span className="icon2 ml-3"><TfiAngleDoubleDown /></span>
 			</Button>
 		</div >

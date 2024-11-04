@@ -1,20 +1,16 @@
-:root {
-	--cor-principal: #8e00a3;
-	/* --cor-principal: #d8595a; */
-	--cor-secundaria: #f6bb92;
-	--border-radius: 10px;
-	--rgba-black1: rgba(0, 0, 0, 0.1);
-	--rgba-black2: rgba(0, 0, 0, 0.2);
-	--rgba-black5: rgba(0, 0, 0, 0.5);
-	--rgba-black6: rgba(0, 0, 0, 0.6);
-	--rgba-black7: rgba(0, 0, 0, 0.7);
-	--rgba-black8: rgba(0, 0, 0, 0.8);
-}
-
 * {
 	margin: 0px;
 	padding: 0px
 }
+
+@import url("./styles/cardTab.css");
+@import url("./styles/allCatTab.css");
+@import url("./styles/searchCEP.css");
+@import url("./styles/headerSearch.css");
+@import url("./styles/locationModal.css");
+@import url("./styles/headerWrapper.css");
+@import url("./styles/config/constants.css");
+@import url("./styles/navPartCategories.css");
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
@@ -38,111 +34,8 @@ body {
 	}
 }
 
-.headerWrapper .top-strip {
-	padding: 8px 0px;
-}
-
-.headerWrapper .top-strip p {
-	color: white;
-}
-
-.headerWrapper .header {
-	width: 100%;
-	height: auto;
-	padding: 25px 0px;
-}
-
 .logoWrapper img {
 	width: 100%;
-}
-
-.headerWrapper .header .part2 .searchCEP button {
-	/* width: 100px;
-	color: #8e00a3; */
-}
-
-.headerWrapper .header .part2 .searchCEP {
-	width: 150px;
-	height: 50px;
-	min-width: 150px;
-	padding: 10px 10px;
-	text-align: left;
-	border-radius: var(--border-radius);
-	border: 1px solid var(--rgba-black1);
-	justify-content: flex-start !important;
-}
-
-.headerWrapper .header .part2 .searchCEP .label {
-	font-size: 10px;
-	font-weight: 500;
-	line-height: 16px;
-	color: var(--rgba-black5);
-	text-transform: capitalize;
-}
-
-.headerWrapper .header .part2 .searchCEP .local {
-	font-size: 14px;
-	font-weight: 600;
-	line-height: 16px;
-	color: var(--cor-principal);
-	text-transform: capitalize;
-}
-
-.headerWrapper .header .part2 .searchCEP svg {
-	opacity: 0.7;
-	color: var(--rgba-black7);
-}
-
-/* .searchCEP input {
-	width: 80%;
-	height: 30px;
-	padding: 45px;
-	position: relative;
-	background: #f3f4f7;
-	border-radius: var(--border-radius);
-	padding: 0px 20px !important;
-	border: 1px solid rgba(0, 0, 0, 0.1);
-} */
-
-header .headerSearch {
-	width: 60%;
-	height: 50px;
-	padding: 5px;
-	position: relative;
-	background: #f3f4f7;
-	border-radius: var(--border-radius);
-	border: 1px solid var(--rgba-black1);
-}
-
-header .headerSearch input {
-	background: transparent !important;
-	outline: none !important;
-	font-size: 15px;
-	color: var(--rgba-black8);
-	width: 100%;
-	height: 35px;
-	border: 0px !important;
-	padding: 0px 20px !important;
-}
-
-header .headerSearch input::-webkit-input-placeholder {
-	color: var(--rgba-black6)
-}
-
-header .headerSearch button {
-	position: absolute;
-	top: 10px;
-	right: 15px;
-	z-index: 100;
-	min-width: 30px !important;
-	height: 30px !important;
-	width: 30px !important;
-	border-radius: 50px !important;
-	color: var(--cor-principal);
-}
-
-header .headerSearch button svg {
-	font-size: 25px;
 }
 
 header .part3 .circle {
@@ -158,77 +51,4 @@ header .part3 .circle {
 
 header .part3 .circle svg {
 	font-size: 22px;
-}
-
-.cardTab .price {
-	font-size: 18px;
-	color: var(--rgba-black8);
-	font-weight: 700;
-}
-
-.cardTab button {
-	background: #fff1ee;
-}
-
-.cardTab .count {
-	position: absolute;
-	top: -6px;
-	right: -4px;
-	background: var(--cor-principal);
-	border-radius: 50%;
-	color: #fff;
-	width: 20px;
-	height: 20px;
-}
-
-div .allCatTab {
-	background: var(--cor-principal);
-	padding: 10px 15px !important;
-	border-radius: 30px !important;
-}
-
-div .allCatTab * {
-	color: white
-}
-
-div .allCatTab:hover {
-	background: var(--cor-secundaria);
-}
-
-div .allCatTab .text {
-	font-weight: 600;
-}
-
-div .allCatTab .icon1 svg {
-	font-size: 20px !important;
-}
-
-div .allCatTab .icon2 svg {
-	font-size: 15px !important;
-}
-
-nav .navPartCategories ul {
-	margin-bottom: 0px;
-}
-
-nav .navPartCategories ul li a {
-	font-size: 16px;
-	font-weight: 600;
-	text-decoration: none;
-	color: var(--rgba-black8);
-	text-transform: uppercase;
-	display: flex;
-	align-items: center;
-	padding: 0px 5px;
-	transition: all 0.2s ease-in-out;
-	border-radius: var(--border-radius);
-}
-
-nav .navPartCategories ul li a svg {
-	font-size: 20px;
-}
-
-nav .navPartCategories ul li a:hover {
-	background: #f0faff;
-	color: var(--cor-principal)
 }

@@ -1,0 +1,25 @@
+div .allCatTab {
+	background: var(--cor-principal);
+	padding: 10px 15px !important;
+	border-radius: 30px !important;
+}
+
+div .allCatTab * {
+	color: white
+}
+
+div .allCatTab:hover {
+	background: var(--cor-secundaria);
+}
+
+div .allCatTab .text {
+	font-weight: 600;
+}
+
+div .allCatTab .icon1 svg {
+	font-size: 20px !important;
+}
+
+div .allCatTab .icon2 svg {
+	font-size: 15px !important;
+}
