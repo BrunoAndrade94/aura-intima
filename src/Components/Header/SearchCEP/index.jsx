@@ -1,7 +1,7 @@
 import DialogCEP from "../DialogCEP"
+import { Button } from "@mui/material";
 import React, { useState } from "react";
 import { CiLocationOn } from "react-icons/ci";
-import { Button } from "@mui/material";
 import { LOCALIZACAO, SUA_LOCALIZACAO } from "../../../assets/var-const"
 
 const SearchCEP = () => {

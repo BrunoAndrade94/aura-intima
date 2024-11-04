@@ -1,15 +1,28 @@
+import React, { useContext, useState } from 'react'
 import { Button } from "@mui/material";
-import { PESQUISA_PLACEHOLDER } from "../../../assets/var-const"
 import { IoSearchOutline } from "react-icons/io5"
+// import { InputContext } from "../../../context/InputContext";
 
 const SearchBox = (props) => {
+	const [inputLocal, setInputLocal] = useState('')
+	// const { setInputContext } = useContext(InputContext)
+
+	// const enviarInputLocal = () => {
+	// 	setInputContext(inputLocal)
+	// }
+
 	return (
-		<>
-			<div className="headerSearch ml-3 mr-3">
-				<input type="text" placeholder={props.place} />
-				<Button><IoSearchOutline /></Button>
-			</div>
-		</>
+		<div className={"headerSearch " + `${props.className}`}>
+			<input
+				type="text"
+				value={inputLocal}
+				placeholder={props.placeHolder}
+			// onChange={(evento) => setInputLocal(evento.target.value)}
+			/>
+			<Button
+			// onClick={enviarInputLocal}
+			><IoSearchOutline /></Button>
+		</div>
 	)
 }
 

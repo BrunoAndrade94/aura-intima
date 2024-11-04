@@ -1,19 +1,20 @@
-import { Link } from "react-router-dom"
+import Category from "../Category"
 import { TIPOS_CATEGORIAS } from "../../../assets/var-const"
+import { Button } from "@mui/material"
 
 const Categories = () => {
 	return (
 		<>
 			<div className="navPartCategories col-sm-9 align-items-center">
 				<ul className="list list-inline ml-auto">
-					<li className="list-inline-item"><Link to={"/"}>{TIPOS_CATEGORIAS.home}</Link></li>
-					<li className="list-inline-item"><Link to={"/"}>{TIPOS_CATEGORIAS.promocao}</Link></li>
-					<li className="list-inline-item"><Link to={"/"}>{TIPOS_CATEGORIAS.sutias}</Link></li>
-					<li className="list-inline-item"><Link to={"/"}>{TIPOS_CATEGORIAS.calcinhas}</Link></li>
-					<li className="list-inline-item"><Link to={"/"}>{TIPOS_CATEGORIAS.maisVendidos}</Link></li>
-					<li className="list-inline-item"><Link to={"/"}>{TIPOS_CATEGORIAS.modaPraia}</Link></li>
-					<li className="list-inline-item"><Link to={"/"}>{TIPOS_CATEGORIAS.modaSex}</Link></li>
-					<li className="list-inline-item"><Link to={"/"}>{TIPOS_CATEGORIAS.contato}</Link></li>
+					<Category to="/" categoria={TIPOS_CATEGORIAS.home} />
+					<Category to="/" categoria={TIPOS_CATEGORIAS.promocao} />
+					<Category to="/" categoria={TIPOS_CATEGORIAS.sutias} />
+					<Category to="/" categoria={TIPOS_CATEGORIAS.calcinhas} />
+					<Category to="/" categoria={TIPOS_CATEGORIAS.maisVendidos} />
+					<Category to="/" categoria={TIPOS_CATEGORIAS.modaPraia} />
+					<Category to="/" categoria={TIPOS_CATEGORIAS.modaSex} />
+					<Category to="/" categoria={TIPOS_CATEGORIAS.contato} />
 				</ul>
 			</div>
 		</>

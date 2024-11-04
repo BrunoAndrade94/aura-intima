@@ -19,8 +19,12 @@
 	padding: 0px 20px !important;
 }
 
-.headerSearch input::-webkit-input-placeholder {
-	color: var(--rgba-black6)
+.headerSearch input::placeholder {
+	color: var(--rgba-black5)
+}
+
+.headerSearch input:focus::placeholder {
+	color: var(--rgba-black2)
 }
 
 .headerSearch button {
