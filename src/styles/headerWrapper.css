@@ -1,13 +1,13 @@
 .headerWrapper .top-strip {
-	padding: 8px 0px;
+  padding: 8px 0px;
 }
 
 .headerWrapper .top-strip p {
-	color: white;
+  color: white;
 }
 
 .headerWrapper .header {
-	width: 100%;
-	height: auto;
-	padding: 25px 0px;
+  width: 100%;
+  height: auto;
+  padding: 25px 0px;
 }

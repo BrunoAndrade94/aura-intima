@@ -1,60 +1,97 @@
-import React, { useContext, useState } from "react";
-import { MdClose } from "react-icons/md";
-import { IoIosSearch } from "react-icons/io";
-import { CEP, CONSULTAR_FRETE, INFORME_O_CEP, VALOR_E_PRAZO } from "../../../assets/var-const";
-import { Dialog, DialogTitle, Slide, Button, ButtonBase } from "@mui/material";
+import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
+import { useDispatch, useSelector } from "react-redux";
+import { Dialog, DialogTitle } from "@mui/material";
+import { getCEP } from "../../../services/apis/apiCEP";
 import MyButton from "../../MyButton";
-import GetCEP from '../../../services/apis/apiCEP'
-import { InputProvider, InputContext } from "../../../context/InputContext";
 import SearchBox from "../SearchBox";
-import { useSelector } from "react-redux";
+import DialogNotification from "../../DialogNotification";
+import { CEP, CONSULTAR_FRETE, VALOR_E_PRAZO } from "../../../assets/var-const";
+import {
+  closeDialogCEP,
+  flagDialogCEP,
+} from "../../../redux/features/dialog/dialogSlice";
+import {
+  closeNotification,
+  flagNotification,
+} from "../../../redux/features/notification/notificationSlice";
 
-// const Transition = React.forwardRef(function Transition(pros, ref) {
-// 	return <Slide direction="up" ref={ref} {...props} />
-// })
+const DialogCEP = ({ open }) => {
+  const dispatch = useDispatch();
+  const [isOpenNotification, setOpenNotification] = useState(false);
 
-const DialogCEP = () => {
-	// const [isOpenModal, setIsOpenModal] = useState(false)
-	const [input, setInput] = useState("")
-	const [cep, setCEP] = useState({})
+  const obCEP = {};
 
-	const { inputContext } = useContext(InputContext)
+  const cep = useSelector((state) => state.input.value);
+  const isOpenDialogSelector = useSelector((state) => state.dialog.isOpen);
+  const isOpenNotificationSelector = useSelector(
+    (state) => state.notification.isOpen
+  );
 
-	// const inputValue = useSelector((state) => state.input.inputValue);
+  const handleSetOpenNotification = () => setOpenNotification(true);
+  const handleSetCloseNotification = () => setOpenNotification(false);
 
-	console.log(inputContext)
+  const closeDialog = () => {
+    dispatch(closeDialogCEP());
+    dispatch(closeNotification());
+  };
 
-	async function handleSearch() {
-		if (setInput === '' || setCEP.cep === '') {
-			alert("preencha algum cep")
-			alert(cep.cep)
-			return
-		}
+  const openCloseNotification = () => {
+    dispatch(flagNotification());
+  };
 
-		try {
-			const response = await GetCEP.get(`${input}/json/`)
-			setCEP(response.data)
-			setInput('')
-		} catch (error) {
-			alert("erro no servidor, tente novamente.")
-			setInput('')
-			return
-		}
-	}
+  // const closeNotification = () => {
+  //   dispatch(flagNotification());
+  // };
+  useEffect(() => {
+    if (cep) {
+      const fetchCepData = async () => {
+        try {
+          obCEP = await getCEP(cep);
+        } catch (error) {
+          return error.message;
+        }
+      };
+      fetchCepData();
+    }
+  }, [cep]);
 
-	return (
-		<Dialog className="locationModal" open={true}>
-			<h4>{CONSULTAR_FRETE}</h4>
-			<span className="valor-e-prazo">{VALOR_E_PRAZO}</span>
+  return (
+    <div>
+      <Dialog className="locationModal" open={isOpenDialogSelector}>
+        <DialogTitle>{CONSULTAR_FRETE}</DialogTitle>
+        <span className="valor-e-prazo">{VALOR_E_PRAZO}</span>
 
-			{inputContext}
-			<SearchBox className="w-100" placeHolder={CEP} />
+        <SearchBox className="w-100" placeHolder={CEP} />
 
-			<Button onClick={handleSearch}>CONF</Button>
-			{/* <MyButton placeHolder="CONFIRMAR" /> */}
+        {/* <MyButton className="mt-3" onClick={handleSetOpenNotification} /> */}
 
-		</Dialog>
-	)
-}
+        <MyButton
+          color="error"
+          label="FECHAR"
+          className="mt-3"
+          onClick={closeDialog}
+        />
+      </Dialog>
 
-export default DialogCEP
+      <DialogNotification
+        open={isOpenNotificationSelector}
+        onClose={openCloseNotification}
+        title="Aviso"
+        message={"e"}
+        dialogColor="#fff"
+        buttonProps={{
+          label: "Entendido",
+          color: "secondary",
+          onClick: openCloseNotification,
+        }}
+      />
+    </div>
+  );
+};
+
+DialogCEP.propTypes = {
+  open: PropTypes.boolean,
+};
+
+export default DialogCEP;

@@ -12,9 +12,6 @@ const Categories = () => {
 					<Category to="/" categoria={TIPOS_CATEGORIAS.sutias} />
 					<Category to="/" categoria={TIPOS_CATEGORIAS.calcinhas} />
 					<Category to="/" categoria={TIPOS_CATEGORIAS.maisVendidos} />
-					<Category to="/" categoria={TIPOS_CATEGORIAS.modaPraia} />
-					<Category to="/" categoria={TIPOS_CATEGORIAS.modaSex} />
-					<Category to="/" categoria={TIPOS_CATEGORIAS.contato} />
 				</ul>
 			</div>
 		</>

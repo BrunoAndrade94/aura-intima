@@ -1,18 +1,12 @@
-// import { createStore } from "redux"
+import { configureStore } from "@reduxjs/toolkit";
+import { inputReducer } from "./features/input/inputSlice";
+import { dialogReducer } from "./features/dialog/dialogSlice";
+import { notificationReducer } from "./features/notification/notificationSlice";
 
-// import rootReducer from "./root-reducer"
-
-// const store = createStore(rootReducer)
-
-// export default store
-
-// import { configureStore } from '@reduxjs/toolkit';
-// import inputReducer from './input-value/reducer';
-
-// const store = configureStore({
-// 	reducer: {
-// 		input: inputReducer
-// 	}
-// });
-
-// export default store
+export const store = configureStore({
+  reducer: {
+    input: inputReducer,
+    dialog: dialogReducer,
+    notification: notificationReducer,
+  },
+});

@@ -1,6 +1,6 @@
 * {
-	margin: 0px;
-	padding: 0px
+  margin: 0px;
+  padding: 0px;
 }
 
 @import url("./styles/cardTab.css");
@@ -12,51 +12,50 @@
 @import url("./styles/config/constants.css");
 @import url("./styles/navPartCategories.css");
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 body {
-	font-family: "Lato", "sans-serif";
-	font-size: 14px;
+  font-family: "Lato", "sans-serif";
+  font-size: 14px;
 }
 
 .bg-aura {
-	background: var(--cor-principal);
+  background: var(--cor-principal);
 }
 
 @media (min-width: 1300px) {
-
-	.container,
-	.container-lg,
-	.container-md,
-	.container-sm,
-	.container-xl {
-		max-width: 1200px;
-	}
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 1200px;
+  }
 }
 
 .logoWrapper img {
-	width: 100%;
+  width: 100%;
 }
 
 header .part3 .circle {
-	align-items: center;
-	justify-content: center;
-	min-width: 40px !important;
-	height: 40px !important;
-	width: 40px !important;
-	border-radius: 50px !important;
-	border: 1px solid var(--rgba-black1) !important;
-	color: var(--cor-principal);
+  align-items: center;
+  justify-content: center;
+  min-width: 40px !important;
+  height: 40px !important;
+  width: 40px !important;
+  border-radius: 50px !important;
+  border: 1px solid var(--rgba-black1) !important;
+  color: var(--cor-principal);
 }
 
 header .part3 .circle svg {
-	font-size: 22px;
+  font-size: 22px;
 }
 
 .valor-e-prazo {
-	margin-bottom: 2%;
+  margin-bottom: 2%;
 }
 
-/* .my-button button {
-	background: red;
-} */
+.my-button button {
+  background: red;
+}
