@@ -1,15 +1,18 @@
 import React, { useContext, useState } from 'react'
 import { Button } from "@mui/material";
 import { IoSearchOutline } from "react-icons/io5"
-// import { InputContext } from "../../../context/InputContext";
+import { InputContext } from "../../../context/InputContext";
+// import { useDispatch } from 'react-redux';
+// import { setInputValue } from '../../../redux/input-value/reducer';
 
 const SearchBox = (props) => {
 	const [inputLocal, setInputLocal] = useState('')
-	// const { setInputContext } = useContext(InputContext)
+	// const dispatch = useDispatch();
+	const { setInputContext } = useContext(InputContext)
 
-	// const enviarInputLocal = () => {
-	// 	setInputContext(inputLocal)
-	// }
+	const enviarInputLocal = () => {
+		setInputContext(inputLocal)
+	}
 
 	return (
 		<div className={"headerSearch " + `${props.className}`}>
@@ -17,10 +20,10 @@ const SearchBox = (props) => {
 				type="text"
 				value={inputLocal}
 				placeholder={props.placeHolder}
-			// onChange={(evento) => setInputLocal(evento.target.value)}
+				onChange={(evento) => setInputLocal(evento.target.value)}
 			/>
 			<Button
-			// onClick={enviarInputLocal}
+				onClick={enviarInputLocal}
 			><IoSearchOutline /></Button>
 		</div>
 	)
