@@ -1,5 +1,4 @@
 import React from "react";
-import MyButton from "../MyButton";
 import PropTypes from "prop-types";
 import {
   Dialog,
@@ -7,6 +6,7 @@ import {
   DialogContent,
   DialogActions,
 } from "@mui/material";
+import MyButton from "../MyButton";
 
 const DialogNotification = ({
   open,

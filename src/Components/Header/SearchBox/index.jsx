@@ -6,7 +6,7 @@ import { Button } from "@mui/material";
 import { IoSearchOutline } from "react-icons/io5";
 import { flagNotification } from "../../../redux/features/notification/notificationSlice";
 
-const SearchBox = (props) => {
+const SearchBox = ({ className, placeHolder }) => {
   const [inputLocal, setInputLocal] = useState("");
   const dispatch = useDispatch();
 
@@ -19,11 +19,11 @@ const SearchBox = (props) => {
   };
 
   return (
-    <div className={"headerSearch " + `${props.className}`}>
+    <div className={"headerSearch " + `${className}`}>
       <input
         type="text"
         value={inputLocal}
-        placeholder={props.placeHolder}
+        placeholder={placeHolder}
         onChange={(evento) => setInputLocal(evento.target.value)}
       />
       <Button onClick={openNotification}>
