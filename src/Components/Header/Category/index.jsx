@@ -1,15 +1,19 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
-const Category = (props) => {
-	return (
-		<>
-			<li className="list-inline-item">
-				<Link to={props.to}>
-					{props.categoria}
-				</Link>
-			</li>
-		</>
-	)
-}
+const Category = ({ to, category }) => {
+  return (
+    <>
+      <li className="list-inline-item">
+        <Link to={to}>{category}</Link>
+      </li>
+    </>
+  );
+};
 
-export default Category
+Category.propTypes = {
+  to: PropTypes.string,
+  category: PropTypes.string,
+};
+
+export default Category;

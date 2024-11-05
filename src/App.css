@@ -56,6 +56,10 @@ header .part3 .circle svg {
   margin-bottom: 2%;
 }
 
-.my-button button {
-  background: red;
+.sub-category {
+  font-size: 22px;
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  min-width: 300px;
 }
