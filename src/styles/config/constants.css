@@ -1,10 +1,12 @@
 :root {
   /* --cor-principal: #d8595a; */
-  --cor-principal: #8e00a3;
-  --cor-secundaria: #f6bb92;
+  /* --cor-principal: #8e00a3; */
+  --cor-principal: #ee82ee;
+  /* --cor-principal: #8a2be2; */
+  --cor-secundaria: #8a2be2;
+  /* --cor-secundaria: #f6bb92; */
 
   --border-radius: 10px;
-
   --rgba-black1: rgba(0, 0, 0, 0.1);
   --rgba-black2: rgba(0, 0, 0, 0.2);
   --rgba-black3: rgba(0, 0, 0, 0.3);

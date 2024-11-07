@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import PropTypes from "prop-types";
 import { useDispatch, useSelector } from "react-redux";
 import MyButton from "../../MyButton";
 import { Dialog, DialogTitle } from "@mui/material";
@@ -16,8 +15,6 @@ import {
 const DialogCEP = () => {
   const dispatch = useDispatch();
   const [isOpenNotification, setOpenNotification] = useState(false);
-
-  // const getCEP = "";
 
   const cep = useSelector((state) => state.input.value);
   const isOpenDialogSelector = useSelector((state) => state.dialog.isOpen);
@@ -62,12 +59,7 @@ const DialogCEP = () => {
 
           {/* <MyButton className="mt-3" onClick={handleSetOpenNotification} /> */}
 
-          <MyButton
-            color="error"
-            label="FECHAR"
-            className="mt-3"
-            onClick={closeDialog}
-          />
+          <MyButton label="FECHAR" className="mt-3" onClick={closeDialog} />
         </Dialog>
 
         <DialogNotification
@@ -76,9 +68,7 @@ const DialogCEP = () => {
           title="Aviso"
           message={""}
           dialogColor="#fff"
-          buttonProps={{
-            label: "Entendido",
-            color: "secondary",
+          myButtonProps={{
             onClick: openCloseNotification,
           }}
         />

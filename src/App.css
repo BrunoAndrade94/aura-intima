@@ -45,7 +45,7 @@ header .part3 .circle {
   width: 40px !important;
   border-radius: 50px !important;
   border: 1px solid var(--rgba-black1) !important;
-  color: var(--cor-principal);
+  color: var(--cor-secundaria);
 }
 
 header .part3 .circle svg {
@@ -57,9 +57,33 @@ header .part3 .circle svg {
 }
 
 .sub-category {
-  font-size: 22px;
+  font-size: 30px;
   position: absolute;
   top: 100%;
   left: 0%;
   min-width: 300px;
+}
+
+.categories svg {
+  margin-right: 10px;
+  font-size: 20px;
+  color: var(--cor-secundaria);
+}
+
+.categories .categories-name {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.list-categories {
+  display: flex;
+}
+
+.category {
+  margin-right: 18px;
+}
+
+.menu-item:focus {
+  color: var(--cor-secundaria);
+  font-weight: 800;
 }

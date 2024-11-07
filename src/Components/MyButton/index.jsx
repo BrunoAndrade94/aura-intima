@@ -1,13 +1,12 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { Button } from "@mui/material";
 
 const MyButton = ({
-  label = "Confirmar",
-  color = "primary",
+  label = "OK",
+  color = "info",
   onClick,
-  variant = "contained",
-  className = "",
+  variant = "outlined",
+  className,
 }) => {
   return (
     <Button
@@ -21,20 +20,5 @@ const MyButton = ({
     </Button>
   );
 };
-
-// Definindo os tipos das props usando PropTypes
-MyButton.propTypes = {
-  label: PropTypes.string.isRequired,
-  color: PropTypes.string,
-  onClick: PropTypes.func,
-  variant: PropTypes.string,
-  className: PropTypes.string,
-};
-
-// MyButton.defaultProps = {
-//   label: "Confirmar",
-//   color: "primary",
-//   variant: "contained",
-// };
 
 export default MyButton;

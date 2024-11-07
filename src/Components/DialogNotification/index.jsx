@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import {
   Dialog,
   DialogTitle,
@@ -14,7 +13,7 @@ const DialogNotification = ({
   title = "Notificação",
   message = "Oi, eu sou um DialogNotification (:",
   dialogColor = "#fff",
-  buttonProps = {},
+  myButtonProps = {},
 }) => {
   return (
     <Dialog
@@ -27,19 +26,10 @@ const DialogNotification = ({
         <p>{message}</p>
       </DialogContent>
       <DialogActions>
-        <MyButton {...buttonProps} />
+        <MyButton {...myButtonProps} />
       </DialogActions>
     </Dialog>
   );
-};
-
-DialogNotification.propTypes = {
-  open: PropTypes.bool.isRequired,
-  onClose: PropTypes.func.isRequired,
-  title: PropTypes.string,
-  message: PropTypes.string,
-  dialogColor: PropTypes.string,
-  buttonProps: PropTypes.object,
 };
 
 export default DialogNotification;
