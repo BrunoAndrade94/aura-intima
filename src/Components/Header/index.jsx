@@ -1,12 +1,12 @@
-import CardUser from "./CardUser";
-import SearchBox from "./SearchBox";
-import TextHeader from "./TextHeader";
-import LogoHeader from "./LogoHeader";
-import Navigation from "../Navigation";
-import SearchCEP from "./SearchCEP";
 import { PESQUISAR_PRODUTO } from "../../assets/var-const";
+import Navigation from "../Navigation";
 import AllCategories from "./AllCategories";
+import CardUser from "./CardUser";
 import ListCategories from "./ListCategories";
+import LogoHeader from "./LogoHeader";
+import SearchBox from "./SearchBox";
+import SearchCEP from "./SearchCEP";
+import TextHeader from "./TextHeader";
 
 const Header = () => {
   return (
@@ -21,12 +21,6 @@ const Header = () => {
               <SearchBox className="mr-3" placeHolder={PESQUISAR_PRODUTO} />
               <CardUser />
             </div>
-          </div>
-        </div>
-        <div className="container mt-4">
-          <div className="row">
-            <AllCategories />
-            <ListCategories />
           </div>
         </div>
       </header>

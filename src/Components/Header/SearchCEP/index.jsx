@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import DialogCEP from "../DialogCEP";
 import { Button } from "@mui/material";
+import React, { useState } from "react";
 import { CiLocationOn } from "react-icons/ci";
+import { useDispatch, useSelector } from "react-redux";
 import { LOCALIZACAO, SUA_LOCALIZACAO } from "../../../assets/var-const";
 import { flagDialogCEP } from "../../../redux/features/dialog/dialogSlice";
+import DialogCEP from "../DialogCEP";
 
 const SearchCEP = () => {
   const [isOpenDialog, setIsOpenDialog] = useState();
@@ -22,7 +22,7 @@ const SearchCEP = () => {
 
   return (
     <>
-      <div className="ml-3 mr-3">
+      <div className="ml-0 mr-3">
         <Button className="searchCEP" onClick={openDialog}>
           <div className="info d-flex flex-column">
             <span className="label">{SUA_LOCALIZACAO}</span>

@@ -1,20 +1,19 @@
-import * as React from "react";
-import PropTypes from "prop-types";
 import { Dropdown } from "@mui/base/Dropdown";
 import { Menu } from "@mui/base/Menu";
 import { MenuButton as BaseMenuButton } from "@mui/base/MenuButton";
 import { MenuItem as BaseMenuItem, menuItemClasses } from "@mui/base/MenuItem";
-import { styled } from "@mui/system";
 import { CssTransition } from "@mui/base/Transitions";
 import { PopupContext } from "@mui/base/Unstable_Popup";
-import { TbShoppingCartPlus } from "react-icons/tb";
+import { styled } from "@mui/system";
+import PropTypes from "prop-types";
+import * as React from "react";
+import { CiViewList } from "react-icons/ci";
 import {
   MdOutlineContactSupport,
   MdOutlineDisabledByDefault,
 } from "react-icons/md";
-import { CATEGORIAS_MAIS_VENDIDOS } from "../../../assets/var-const";
 import { PiSunHorizonBold } from "react-icons/pi";
-import { CiViewList } from "react-icons/ci";
+import { TbShoppingCartPlus } from "react-icons/tb";
 
 export default function Categories({ nameMenu, itemsMenu = null, iconName }) {
   return (
@@ -25,7 +24,7 @@ export default function Categories({ nameMenu, itemsMenu = null, iconName }) {
           <span className={"categories-name"}>{nameMenu.toUpperCase()}</span>
         </MenuButton>
         <Menu slots={{ listbox: AnimatedListbox }}>
-          {itemsMenu.map((i, o, p) => {
+          {itemsMenu.map((i, o) => {
             if (o > 1) {
               return (
                 <MenuItem className="menu-item">{i.toUpperCase()}</MenuItem>

@@ -9,7 +9,12 @@ const Navigation = () => {
         <div className="container">
           <div className="row">
             <Home />
-            oi
+            <div className="container mt-4">
+              <div className="row">
+                <AllCategories />
+                <ListCategories />
+              </div>
+            </div>
           </div>
         </div>
       </nav>
